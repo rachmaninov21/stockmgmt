@@ -1,0 +1,86 @@
+﻿<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Insert title here</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <div class="container-fluid ">
+        <div class="row bg-light border-bottom p-1">
+            <!--メニューバー-->
+            <div class="col-2 pr-2">
+                <h3>在庫管理</h3>
+            </div>
+            <div class="col-7"></div>
+
+            <div class="col-2 pt-2 text-right" id="clock-space">
+            </div>
+
+            <div class="col-1">
+                <button type="button" onclick="location.href ='index.html'" class="btn btn-primary btn-block">
+                    ログアウト
+                </button>
+            </div>
+        </div>
+        <div class="row h-75 m-5 p-2 bg-light">
+            <div class="col-12">
+                <!--メインの表示部-->
+                <!--１列目-->
+                <div class="row h-50">
+                    <div class="col-3  h-100 p-5">
+                        <div class="bg-primary h-100 rounded">在庫検索</div>
+                    </div>
+                    <div class="col-3  h-100 p-5">
+                        <div class="bg-primary h-100 rounded">在庫検索</div>
+                    </div>
+                    <div class="col-3  h-100 p-5">
+                        <div class="bg-primary h-100 rounded">在庫検索</div>
+                    </div>
+                    <div class="col-3  h-100 p-5">
+                        <div class="bg-primary h-100 rounded">在庫検索</div>
+                    </div>
+                </div>
+                <!--2列目-->
+                <div class="row h-50">
+                    <div class="col-3  h-100 p-5">
+                        <div class="bg-primary h-100 rounded">在庫検索</div>
+                    </div>
+                    <div class="col-3  h-100 p-5">
+                        <div class="bg-primary h-100 rounded">在庫検索</div>
+                    </div>
+                    <div class="col-3  h-100 p-5">
+                        <div class="bg-primary h-100 rounded">在庫検索</div>
+                    </div>
+                    <div class="col-3  h-100 p-5">
+                        <div class="bg-primary h-100 rounded">在庫検索</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+
+    <script>
+        $(function () {
+            var date = new Date();
+            var year = date.getFullYear();
+            var month = date.getMonth() + 1;
+            var day = date.getDate();
+            var week_list = ['日', '月', '火', '水', '木', '金', '土'];
+            var wd = week_list[date.getDay()];
+            var hour = date.getHours();
+            var minute = date.getMinutes();
+            $('#clock-space').text(year + '/' + month + '/' + day + '(' + wd + ')  ' + hour + ':' + minute);
+
+        });
+
+
+    </script>
+</body>
+</html>
